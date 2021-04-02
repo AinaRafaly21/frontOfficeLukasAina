@@ -1,0 +1,25 @@
+<hr>
+<table id="users">
+    <thead>
+        <tr>
+            <th>Nom utilisateur</th>
+            <th>Type</th>
+            <th>Consomation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of (tab); let i = index;">
+            <td>
+                {{ tab.utilisateur }}
+            </td>
+            <td>
+                {{ tab.type }}
+            </td>
+            <td>
+                {{ tab.consommation }}
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+

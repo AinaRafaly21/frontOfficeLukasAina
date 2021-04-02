@@ -1,0 +1,106 @@
+<div class="login-page">
+    <mat-card class="mat-elevation-z12">
+      <mat-card-title style="text-align:center;">SignIn/SignUp</mat-card-title>
+      <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+        <mat-tab label="Sign In">
+            <mat-card-content>
+
+
+              <form #LoginForm="ngForm">
+                <mat-form-field>
+                  <input
+                    matInput
+                    placeholder="Numero"
+                    required
+                    name="numero"
+                    ngModel
+                    #numero="ngModel">
+                  <mat-error
+                    *ngIf="numero.invalid">
+                    Numero is required
+                  </mat-error>
+
+                </mat-form-field>
+                <mat-form-field>
+                  <input
+                    matInput
+                    placeholder="Password"
+                    type="password"
+                    required
+                    minlength="6"
+                    name="mot_de_passe"
+                    ngModel
+                    #mot_de_passe="ngModel">
+                    <mat-error
+                      *ngIf="mot_de_passe.errors && mot_de_passe.errors.required">
+                      Password is required
+                    </mat-error>
+                    <mat-error
+                      *ngIf="mot_de_passe.errors && mot_de_passe.errors.minlength">
+                      Password must be of length 6
+                    </mat-error>
+                </mat-form-field>
+                <button (click)=connexion(LoginForm)
+                  mat-raised-button
+                  color="primary"
+                  class="login-button">
+                  Sign Up
+                </button>
+
+
+        <mat-tab label="Sign Up">
+          <mat-card-content>
+            <form #InscriptionForm="ngForm">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="User Name"
+                  required
+                  name="nom_utilisateur"
+                  ngModel
+                  #nom_utilisateur="ngModel">
+                <mat-error
+                  *ngIf="nom_utilisateur.invalid">
+                  Username is required
+                </mat-error>
+
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Number"
+                  required
+                  name="numero"
+                  ngModel
+                  #numero="ngModel">
+                  <mat-error *ngIf="numero.invalid">Numero is required</mat-error>
+
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Password"
+                  type="password"
+                  required
+                  minlength="6"
+                  name="mot_de_passe"
+                  ngModel
+                  #mot_de_passe="ngModel">
+                  <mat-error
+                    *ngIf="mot_de_passe.errors && mot_de_passe.errors.required">
+                    Password is required
+                  </mat-error>
+                  <mat-error
+                    *ngIf="mot_de_passe.errors && mot_de_passe.errors.minlength">
+                    Password must be of length 6
+                  </mat-error>
+              </mat-form-field>
+              <button (click)=sinscrire(InscriptionForm)
+                mat-raised-button
+                color="primary"
+                class="login-button">
+                Sign Up
+              </button>
+            </form>
+          </mat-card-content>
+        </mat-tab>
