@@ -6,7 +6,7 @@ export const environment = {
   production: false
 };
 
-export const BASE_URL = "https://webserviceprojet.herokuapp.com/";
+// export const BASE_URL = "https://webserviceprojet.herokuapp.com/";
 // export const BASE_URL = "http://localhost:8080/";
 
 export const USER = { token : "4bc89fa3db3c110b923da0d079da3146" };
